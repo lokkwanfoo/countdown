@@ -1,0 +1,77 @@
+<ion-view view-title="Borstvoeding">
+  <ion-content>
+    
+    <div class="row ">
+
+    	<div class="col col-50">
+
+	    	<div class="list card">
+
+	    	  <div class="item center">
+	    	    <h2 class="nutricianito">Linker borst</h2>	  
+	    	    <p class="nutricianito">{{vm.counter1 | timeformat}}</p>  	    
+	    	  </div>
+	    	  <div class="item ">
+	    	    <button class="button button-stable button-small" ng-click="vm.countUp('1')" ng-disabled="vm.timer1Running" ng-if="vm.counter1 == 0">
+	    	    	<p>Start</p>
+	    	    </button>
+	    	    <button class="button button-stable button-small" ng-click="vm.stop('1')" ng-if="vm.counter1 != 0">
+	    	    	<p >Stop</p>
+	    	    </button>
+	    	  </div>
+	    	  <div class="item ">
+	    	    <button class="button button-stable button-small" ng-click="vm.countUp('1')" ng-disabled="vm.timer1Running" ng-if="vm.counter1 == 0">
+	    	    	<p ng-if="vm.counter1 == 0">Start</p>
+	    	    </button>
+	    	    <button class="button button-stable button-small" ng-click="vm.countDown('1')" ng-disabled="vm.timer1Running" ng-if="vm.counter1 != 0">
+	    	    	<p ng-if="vm.counter1 != 0">Countdown</p>
+	    	    </button>
+	    	    <button class="button button-stable button-small" ng-click="vm.reset('1')" ng-if="vm.counter1 != 0 && !vm.timer1Running">
+	    	    	<p>Reset</p>
+	    	    </button>
+	    	    <button class="button button-stable button-small" ng-click="vm.stop('1')" ng-disabled="!vm.timer1Running" ng-if="vm.timer1Running">
+	    	    	<p>Stop</p>
+	    	    </button>
+	    	  </div>
+
+	    	</div>
+
+    	</div>
+
+    	<div class="col col-50">
+
+	    	<div class="list card">
+
+	    	  <div class="item">
+	    	    <h2 class="center nutricianito">Rechter borst</h2>
+	    	  </div>
+
+	    	  <div class="item ">
+	    	    <p class="center nutricianito">{{vm.counter2 | timeformat}}</p>
+	    	  </div>
+	    	  <div class="item ">
+	    	    <button class="button button-stable button-small" ng-click="vm.countUp()" ng-disabled="vm.timer2Running" ng-if="vm.counter2 == 0">
+	    	    	<p ng-if="vm.counter2 == 0">Start</p>
+	    	    </button>
+	    	    <button class="button button-stable button-small" ng-click="vm.countDown()" ng-disabled="vm.timer2Running" ng-if="vm.counter2 != 0">
+	    	    	<p ng-if="vm.counter2 != 0">Countdown</p>
+	    	    </button>
+	    	    <button class="button button-stable button-small" ng-click="vm.reset()" ng-if="vm.counter2 != 0 && !vm.timer2Running">
+	    	    	<p>Reset</p>
+	    	    </button>
+	    	    <button class="button button-stable button-small" ng-click="vm.stop()" ng-disabled="!vm.timer2Running" ng-if="vm.timer2Running">
+	    	    	<p>Stop</p>
+	    	    </button>
+	    	    
+	    	  </div>
+
+	    	</div>
+
+    	</div>
+
+    </div>
+
+    
+
+  </ion-content>
+</ion-view>
